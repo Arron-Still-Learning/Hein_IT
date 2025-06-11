@@ -11,21 +11,25 @@
   <link rel="stylesheet" href="css/animation.css">
   <script src="js/three.min.js"></script>
   <script src="js/vanta.globe.min.js"></script>
-  <script src="js/bg.js"></script>
+  <script src="js/vanta.topology.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="js/scroll.js"></script>
-  <script src="js/animation.js"></script>
+  <script src="js/style.js"></script>
+  <!--<script src="js/responsive.js"></script>-->
 
 </head>
 
 <body>
   <div class="wrapper">
-    <div id="testing"></div>
     <header>
       <div class="container">
         <h1 class="logo"><a href="#"><img src="img/Logo.png" alt="Hein Latt Naing Portfolio Logo"></a></h1>
         <nav>
-          <ul>
+          <p class="btn-gnavi">
+            <span></span>
+            <span></span>
+            <span></span>
+          </p>
+          <ul class="gnav">
             <li class="nav-link active"><a href="#">Home</a></li>
             <li class="nav-link"><a href="#experience">Experience</a></li>
             <li class="nav-link"><a href="#education">Education</a></li>
@@ -48,6 +52,84 @@
         </div>
         <div class="right-banner">
           <img src="img/profile_photo.png" alt="Hein Latt Naing">
+        </div>
+      </div>
+    </section>
+    <section class="skills" id="skills">
+      <div class="container">
+        <h2 class="heading">Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-item">
+            <div class="skill-icon">
+              <div class="skill-icon-bg">
+                <span class="skill-symbol">🌐</span>
+              </div>
+            </div>
+            <div class="skill-content">
+              <h3>Network Configuration</h3>
+              <p>Router, Switch & Access Point setup, VLAN configuration, and network optimization</p>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-icon">
+              <div class="skill-icon-bg">
+                <span class="skill-symbol">🛡️</span>
+              </div>
+            </div>
+            <div class="skill-content">
+              <h3>Network Security</h3>
+              <p>Firewall management, VPN setup, and implementing security protocols</p>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-icon">
+              <div class="skill-icon-bg">
+                <span class="skill-symbol">💻</span>
+              </div>
+            </div>
+            <div class="skill-content">
+              <h3>Technical Support</h3>
+              <p>Hardware troubleshooting, software installation, and user account management</p>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-icon">
+              <div class="skill-icon-bg">
+                <span class="skill-symbol">🗄️</span>
+              </div>
+            </div>
+            <div class="skill-content">
+              <h3>Server Management</h3>
+              <p>Server room maintenance, backup solutions, and system monitoring</p>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-icon">
+              <div class="skill-icon-bg">
+                <span class="skill-symbol">📡</span>
+              </div>
+            </div>
+            <div class="skill-content">
+              <h3>Network Protocols</h3>
+              <p>TCP/IP, DHCP, DNS configuration and network protocol troubleshooting</p>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-icon">
+              <div class="skill-icon-bg">
+                <span class="skill-symbol">🔧</span>
+              </div>
+            </div>
+            <div class="skill-content">
+              <h3>IT Infrastructure</h3>
+              <p>Cable management, inventory tracking, and equipment deployment</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -143,7 +225,7 @@
               <p>2022</p>
               <p>Building Web Applications in PHP</p>
           </li>
-           <li class="edu-item">
+          <li class="edu-item">
             <img src="./img/microsoft.png" alt="Microsoft">
             <div class="edu-content">
               <h3>Microsoft</h3>
@@ -158,7 +240,7 @@
         <h2 class="heading">Projects</h2>
         <ul class="projects-list">
           <li class="project-item">
-            <a href="https://arron-still-learning.github.io/Sensation/" target="_blank">  
+            <a href="https://arron-still-learning.github.io/Sensation/" target="_blank">
               <div class="project-image">
                 <img src="./img/sensation_thumbnail.png" alt="Resume Builder">
               </div>
