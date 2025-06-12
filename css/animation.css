@@ -1,172 +1,274 @@
 .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-        
-        .animate-on-scroll.animated {
-            opacity: 1;
-            transform: translateY(0);
-        }
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
 
-        /* Banner Section - Fade in with scale */
-        .banner .left-banner {
-            opacity: 0;
-            transform: translateX(-100px) scale(0.9);
-            transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-        
-        .banner .right-banner {
-            opacity: 0;
-            transform: translateX(100px) scale(0.9);
-            transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            transition-delay: 0.3s;
-        }
-        
-        .banner.animated .left-banner,
-        .banner.animated .right-banner {
-            opacity: 1;
-            transform: translateX(0) scale(1);
-        }
+.animate-on-scroll.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
 
-        /* Experience Section - Staggered slide up */
-        .exp .exp-item {
-            opacity: 0;
-            transform: translateY(60px);
-            transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-        
-        .exp .exp-item:nth-child(1) { transition-delay: 0.1s; }
-        .exp .exp-item:nth-child(2) { transition-delay: 0.2s; }
-        .exp .exp-item:nth-child(3) { transition-delay: 0.3s; }
-        
-        .exp.animated .exp-item {
-            opacity: 1;
-            transform: translateY(0);
-        }
+/* Banner Section - Fade in with scale */
+.banner .left-banner {
+    opacity: 0;
+    transform: translateX(-100px) scale(0.9);
+    transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
 
-        /* Education Section - Fade in with slight rotation */
-        .edu .edu-item {
-            opacity: 0;
-            transform: translateY(40px) rotateX(15deg);
-            transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-        
-        .edu .edu-item:nth-child(1) { transition-delay: 0.1s; }
-        .edu .edu-item:nth-child(2) { transition-delay: 0.2s; }
-        .edu .edu-item:nth-child(3) { transition-delay: 0.3s; }
-        .edu .edu-item:nth-child(4) { transition-delay: 0.4s; }
-        .edu .edu-item:nth-child(5) { transition-delay: 0.5s; }
-        
-        .edu.animated .edu-item {
-            opacity: 1;
-            transform: translateY(0) rotateX(0deg);
-        }
+.banner .right-banner {
+    opacity: 0;
+    transform: translateX(100px) scale(0.9);
+    transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition-delay: 0.3s;
+}
 
-        /* Projects Section - Zoom in with fade */
-        .projects .project-item {
-            opacity: 0;
-            transform: scale(0.8) translateY(30px);
-            transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-        
-        .projects .project-item:nth-child(1) { transition-delay: 0.1s; }
-        .projects .project-item:nth-child(2) { transition-delay: 0.2s; }
-        .projects .project-item:nth-child(3) { transition-delay: 0.3s; }
-        .projects .project-item:nth-child(4) { transition-delay: 0.4s; }
-        
-        .projects.animated .project-item {
-            opacity: 1;
-            transform: scale(1) translateY(0);
-        }
+.banner.animated .left-banner,
+.banner.animated .right-banner {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+}
 
-        /* Contact Section - Elegant fade with slide up */
-        .contact .contact-inner {
-            opacity: 0;
-            transform: translateY(80px);
-            transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-        
-        .contact .social-item {
-            opacity: 0;
-            transform: translateY(30px) scale(0.8);
-            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-        
-        .contact .social-item:nth-child(1) { transition-delay: 0.8s; }
-        .contact .social-item:nth-child(2) { transition-delay: 0.9s; }
-        .contact .social-item:nth-child(3) { transition-delay: 1.0s; }
-        .contact .social-item:nth-child(4) { transition-delay: 1.1s; }
-        .contact .social-item:nth-child(5) { transition-delay: 1.2s; }
-        
-        .contact.animated .contact-inner {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .contact.animated .social-item {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-        }
+/* Experience Section - Staggered slide up */
+.exp .exp-item {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
 
-        /* Section Headings - Elegant underline animation */
-        .heading {
-            opacity: 0;
-            transform: translateX(-50px);
-            transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-        
-        .heading.animated {
-            opacity: 1;
-            transform: translateX(0);
-        }
-        
-        .heading.animated::after {
-            animation: underlineGrow 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s both;
-        }
-        
-        @keyframes underlineGrow {
-            from {
-                width: 0%;
-            }
-            to {
-                width: 40%;
-            }
-        }
+.exp .exp-item:nth-child(1) {
+    transition-delay: 0.1s;
+}
 
-        /* Smooth scroll enhancement */
-        html {
-            scroll-behavior: smooth;
-        }
+.exp .exp-item:nth-child(2) {
+    transition-delay: 0.2s;
+}
 
-        /* Fix hover delays - remove transition delays after animation */
-        .edu.animated .edu-item:hover,
-        .projects.animated .project-item:hover {
-            transition-delay: 0s !important;
-        }
+.exp .exp-item:nth-child(3) {
+    transition-delay: 0.3s;
+}
 
-        /* Override specific hover transitions for better responsiveness */
-        .edu-item:hover {
-            transition: all 0.3s ease !important;
-        }
+.exp.animated .exp-item {
+    opacity: 1;
+    transform: translateY(0);
+}
 
-        .project-item:hover {
-            transition: all 0.3s ease !important;
-        }
+/* Education Section - Fade in with slight rotation */
+.edu .edu-item {
+    opacity: 0;
+    transform: translateY(40px) rotateX(15deg);
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
 
-        /* Reduced motion for accessibility */
-        @media (prefers-reduced-motion: reduce) {
-            .animate-on-scroll,
-            .banner .left-banner,
-            .banner .right-banner,
-            .exp .exp-item,
-            .edu .edu-item,
-            .projects .project-item,
-            .contact .contact-inner,
-            .contact .social-item,
-            .heading {
-                transition: none;
-                opacity: 1;
-                transform: none;
-            }
-        }
+.edu .edu-item:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.edu .edu-item:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.edu .edu-item:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.edu .edu-item:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+.edu .edu-item:nth-child(5) {
+    transition-delay: 0.5s;
+}
+
+.edu.animated .edu-item {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg);
+}
+
+/* Projects Section - Zoom in with fade */
+.projects .project-item {
+    opacity: 0;
+    transform: scale(0.8) translateY(30px);
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.projects .project-item:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.projects .project-item:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.projects .project-item:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.projects .project-item:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+.projects.animated .project-item {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+/* Contact Section - Elegant fade with slide up */
+.contact .contact-inner {
+    opacity: 0;
+    transform: translateY(80px);
+    transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.contact .social-item {
+    opacity: 0;
+    transform: translateY(30px) scale(0.8);
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.contact .social-item:nth-child(1) {
+    transition-delay: 0.8s;
+}
+
+.contact .social-item:nth-child(2) {
+    transition-delay: 0.9s;
+}
+
+.contact .social-item:nth-child(3) {
+    transition-delay: 1.0s;
+}
+
+.contact .social-item:nth-child(4) {
+    transition-delay: 1.1s;
+}
+
+.contact .social-item:nth-child(5) {
+    transition-delay: 1.2s;
+}
+
+.contact.animated .contact-inner {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.contact.animated .social-item {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Section Headings - Elegant underline animation */
+.heading {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.heading.animated {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.heading.animated::after {
+    animation: underlineGrow 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s both;
+}
+
+@keyframes underlineGrow {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 40%;
+    }
+}
+
+/* Smooth scroll enhancement */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Fix hover delays - remove transition delays after animation */
+.edu.animated .edu-item:hover,
+.projects.animated .project-item:hover {
+    transition-delay: 0s !important;
+}
+
+/* Override specific hover transitions for better responsiveness */
+.edu-item:hover {
+    transition: all 0.3s ease !important;
+}
+
+.project-item:hover {
+    transition: all 0.3s ease !important;
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+
+    .animate-on-scroll,
+    .banner .left-banner,
+    .banner .right-banner,
+    .exp .exp-item,
+    .edu .edu-item,
+    .projects .project-item,
+    .contact .contact-inner,
+    .contact .social-item,
+    .heading {
+        transition: none;
+        opacity: 1;
+        transform: none;
+    }
+}
+
+
+
+/* Skills Section - Staggered fade in with slide up */
+.skills .skill-item {
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.skills .skill-item:nth-child(1) { 
+    transition-delay: 0.1s; 
+}
+
+.skills .skill-item:nth-child(2) { 
+    transition-delay: 0.2s; 
+}
+
+.skills .skill-item:nth-child(3) { 
+    transition-delay: 0.3s; 
+}
+
+.skills .skill-item:nth-child(4) { 
+    transition-delay: 0.4s; 
+}
+
+.skills .skill-item:nth-child(5) { 
+    transition-delay: 0.5s; 
+}
+
+.skills .skill-item:nth-child(6) { 
+    transition-delay: 0.6s; 
+}
+
+.skills.animated .skill-item {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Fix hover delays - remove transition delays after animation */
+.skills.animated .skill-item:hover {
+    transition-delay: 0s !important;
+    transition: all 0.3s ease !important;
+}
+
+/* Reduced motion support for skills section */
+@media (prefers-reduced-motion: reduce) {
+    .skills .skill-item {
+        transition: none;
+        opacity: 1;
+        transform: none;
+    }
+}

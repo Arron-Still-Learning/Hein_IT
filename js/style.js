@@ -32,6 +32,8 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+
+
 //end animation
 
 //start scroll
@@ -66,6 +68,24 @@ $(document).ready(function () {
     }
   });
 });
+
+// Add this to your existing scroll animation function
+function handleScrollAnimations() {
+    const animateElements = document.querySelectorAll('.animate-on-scroll, .banner, .exp, .edu, .projects, .skills, .contact, .heading');
+    
+    animateElements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const elementVisible = 150;
+        
+        if (elementTop < window.innerHeight - elementVisible) {
+            element.classList.add('animated');
+        }
+    });
+}
+
+// Call this function on scroll and page load
+window.addEventListener('scroll', handleScrollAnimations);
+window.addEventListener('load', handleScrollAnimations);
 
 //end scroll
 
