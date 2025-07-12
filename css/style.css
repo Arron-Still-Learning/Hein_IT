@@ -848,26 +848,26 @@ footer p:last-child {
 
 .skills-grid {
   display: grid;
+  margin-top: 40px;
   grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   gap: 30px;
-  margin-top: 40px;
 }
 
 .skill-item {
   display: flex;
   align-items: flex-start;
   padding: 25px;
-  background-color: #112240;
   border: 1px solid rgba(100, 255, 218, 0.1);
-  border-radius: 10px;
+  background-color: #112240;
   transition: all 0.3s ease;
+  border-radius: 10px;
   gap: 20px;
 }
 
 .skill-item:hover {
+  box-shadow: 0 10px 25px rgba(100, 255, 218, 0.15);
   transform: translateY(-5px);
   border-color: rgba(100, 255, 218, 0.3);
-  box-shadow: 0 10px 25px rgba(100, 255, 218, 0.15);
 }
 
 .skill-icon {
@@ -876,26 +876,26 @@ footer p:last-child {
 
 .skill-icon-bg {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   width: 60px;
   height: 60px;
-  background: rgba(100, 255, 218, 0.1);
   border: 2px solid rgba(100, 255, 218, 0.3);
-  border-radius: 12px;
+  background: rgba(100, 255, 218, 0.1);
   transition: all 0.3s ease;
+  border-radius: 12px;
 }
 
 .skill-item:hover .skill-icon-bg {
+  box-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
   background: rgba(100, 255, 218, 0.2);
   border-color: #64FFDA;
-  box-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
 }
 
 .skill-symbol {
   font-size: 24px;
-  filter: grayscale(1) brightness(0.8);
   transition: all 0.3s ease;
+  filter: grayscale(1) brightness(0.8);
 }
 
 .skill-item:hover .skill-symbol {
@@ -920,13 +920,70 @@ footer p:last-child {
 }
 
 .skill-content p {
+  line-height: 1.5;
   margin: 0;
   color: #CCD6F6;
   font-family: 'Fira Code', monospace;
   font-size: 14px;
   font-weight: 400;
-  line-height: 1.5;
   opacity: 0.9;
+}
+
+/* Animation classes for skills */
+.skills .skill-item {
+  transform: translateY(50px) scale(0.95);
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 0;
+}
+
+.skills .skill-item:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.skills .skill-item:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.skills .skill-item:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.skills .skill-item:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+.skills .skill-item:nth-child(5) {
+  transition-delay: 0.5s;
+}
+
+.skills .skill-item:nth-child(6) {
+  transition-delay: 0.6s;
+}
+
+.skills .skill-item:nth-child(7) {
+  transition-delay: 0.7s;
+}
+
+.skills .skill-item:nth-child(8) {
+  transition-delay: 0.8s;
+}
+
+.skills.animated .skill-item {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.skills.animated .skill-item:hover {
+  transition: all 0.3s ease !important;
+  transition-delay: 0s !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skills .skill-item {
+    transform: none;
+    transition: none;
+    opacity: 1;
+  }
 }
 
 /*end skills*/
